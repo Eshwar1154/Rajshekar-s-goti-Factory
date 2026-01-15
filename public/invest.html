@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invest</title>
+  <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <h1 class="logo">MyBusiness</h1>
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="jobs.html">💼 Jobs</a></li>
+      <li><a href="invest.html" class="active">💰 Invest</a></li>
+      <li><a href="orders.html">📦 Orders</a></li>
+      <li><a href="contact.html">📞 Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <section class="page">
+    <h2>💰 Investment Plans</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Starter Plan</h3>
+        <p>₹5000 minimum</p>
+        <p>10% yearly return</p>
+        <button class="btn investBtn">Invest</button>
+      </div>
+
+      <div class="card">
+        <h3>Pro Plan</h3>
+        <p>₹20000 minimum</p>
+        <p>18% yearly return</p>
+        <button class="btn investBtn">Invest</button>
+      </div>
+
+      <div class="card">
+        <h3>VIP Plan</h3>
+        <p>₹50000 minimum</p>
+        <p>25% yearly return</p>
+        <button class="btn investBtn">Invest</button>
+      </div>
+    </div>
+
+    <!-- ✅ QR Code Section (hidden by default) -->
+    <div id="qrBox" class="qr-box">
+      <h3>✅ Scan & Pay</h3>
+      <img src="./images/qr.png" alt="QR Code" class="qr-img">
+      <button class="btn" id="closeQR">Close</button>
+    </div>
+
+  </section>
+
+  <script>
+    const investButtons = document.querySelectorAll(".investBtn");
+    const qrBox = document.getElementById("qrBox");
+    const closeQR = document.getElementById("closeQR");
+
+    investButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        qrBox.style.display = "block";
+      });
+    });
+
+    closeQR.addEventListener("click", () => {
+      qrBox.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>

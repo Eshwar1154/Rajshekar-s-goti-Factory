@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Orders</title>
+  <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <h1 class="logo">MyBusiness</h1>
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="jobs.html">💼 Jobs</a></li>
+      <li><a href="invest.html">💰 Invest</a></li>
+      <li><a href="orders.html" class="active">📦 Orders</a></li>
+      <li><a href="contact.html">📞 Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <section class="page">
+    <h2>📦 Place an Order</h2>
+
+    <form id="orderForm" class="form">
+      <input type="text" id="customerName" placeholder="Customer Name" required />
+      <input type="text" id="productName" placeholder="Product Name" required />
+      <input type="number" id="quantity" placeholder="Quantity" required />
+      <button type="submit" class="btn">Submit Order</button>
+    </form>
+
+    <p id="orderStatus"></p>
+  </section>
+
+  <script src="./js/orders.js"></script>
+</body>
+</html>
